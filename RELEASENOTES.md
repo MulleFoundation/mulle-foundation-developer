@@ -1,6 +1,8 @@
 ## 0.19.0
 
-* Various small improvements
+* add some reflect headers to fill out initial project
+* improved resources definitions
+* remove travis
 
 
 ## 0.18.0
