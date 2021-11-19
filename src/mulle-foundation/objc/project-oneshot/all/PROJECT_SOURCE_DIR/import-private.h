@@ -3,16 +3,13 @@
  * DONT:  #import this files in headers
  *        #include this file anywhere
  *
- * template: project-oneshot/all/PROJECT_SOURCE_DIR/import-private.h
- * vendor/extension: mulle-objc/objc
- *
  * This is a central include file to not expose includes to consumers of
  * this library. It must not be imported by .h files, but by .m and
  * .aam files only.
 */
 
 /*
- * Get C includes first, id any
+ * Get C includes first, if any
  *
  * #ifdef __has_include
  * # if __has_include( "include-private.h")

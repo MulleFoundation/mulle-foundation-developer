@@ -4,9 +4,6 @@
  *        #import this files directly in sources
  *        #include this file anywhere
  *
- * template: project-oneshot/all/PROJECT_SOURCE_DIR/import.h
- * vendor/extension: mulle-objc/objc
- *
  * This is a central include file to keep dependencies out of the library
  *  Objective-C files. It is usally imported by Objective-C .h files only.
  *  .m and .aam use import-private.h.
