@@ -1,3 +1,8 @@
+## 0.20.0
+
+* Various small improvements
+
+
 ## 0.19.0
 
 * add some reflect headers to fill out initial project
