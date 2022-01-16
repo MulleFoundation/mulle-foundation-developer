@@ -2,6 +2,12 @@ name: DockerfileCI
 
 on: [push]
 
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+  
+   steps:
+     - uses: actions/checkout@v2
+     - name: Build Docker image 
+       run: docker build -t Dockerfile .
