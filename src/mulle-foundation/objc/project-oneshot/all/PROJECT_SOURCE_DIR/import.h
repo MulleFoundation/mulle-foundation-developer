@@ -10,7 +10,7 @@
  */
 
 /*
- * Get C includes first.
+ * Get C includes first, if
  */
 #ifdef __has_include
 # if __has_include( "include.h")
