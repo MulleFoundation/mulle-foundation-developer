@@ -17,6 +17,17 @@
  * # endif
  * #endif
  */
+#ifndef <|PROJECT_UPCASE_IDENTIFIER|>_GLOBAL
+# ifdef <|PROJECT_UPCASE_IDENTIFIER|>_BUILD
+#  define <|PROJECT_UPCASE_IDENTIFIER|>_GLOBAL    MULLE_C_GLOBAL
+# else
+#  if defined( <|PROJECT_UPCASE_IDENTIFIER|>_INCLUDE_DYNAMIC) || (defined( MULLE_INCLUDE_DYNAMIC) && ! defined( <|PROJECT_UPCASE_IDENTIFIER|>_INCLUDE_STATIC))
+#   define <|PROJECT_UPCASE_IDENTIFIER|>_GLOBAL   MULLE_C_GLOBAL
+#  else
+#   define <|PROJECT_UPCASE_IDENTIFIER|>_GLOBAL   extern
+#  endif
+# endif
+#endif
 
 #import "import.h"
 

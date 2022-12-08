@@ -20,8 +20,9 @@ jobs:
     - name: Set MULLE_HOSTNAME
       run: |
         name="${GITHUB_REF##*/}"
-        MULLE_HOSTNAME="ci-${name##*-}"
+        MULLE_HOSTNAME="${MULLE_HOSTNAME:-ci-${name##*-}}"
         echo "MULLE_HOSTNAME=${MULLE_HOSTNAME}" >> $GITHUB_ENV
+
 
     - name: Add to path
       run:  echo "$HOME/bin" >> $GITHUB_PATH
@@ -30,13 +31,10 @@ jobs:
       run:  env | sort
 
     - uses: actions/checkout@v2
-      if: ${{ ! env.ACT }}
 
     - uses: mulle-sde/github-ci@v1
-      if: ${{ ! env.ACT }}
 
     - uses: mulle-cc/github-ci@v4
-      if: ${{ ! env.ACT }}
 
     - name: List extensions
       run: |
@@ -60,4 +58,6 @@ jobs:
         echo "Adding environment-host-ci-prerelease file from MulleFoundation/test" >&2 &&
         curl -L --output .mulle/etc/env/environment-host-ci-prerelease.sh "https://raw.githubusercontent.com/MulleFoundation/MulleFoundation/prerelease/test/.mulle/etc/env/environment-host-ci-prerelease.sh" >&2 &&
         mulle-sde craft --release &&
-        "./kitchen/Release/exe"
+        [ -x "./kitchen/Release/exe" -o "./kitchen/exe" ] &&
+        ( [ ! -x "./kitchen/Release/exe" ] || "./kitchen/Release/exe" ) &&
+        ( [ ! -x "./kitchen/exe" ] || "./kitchen/exe" )

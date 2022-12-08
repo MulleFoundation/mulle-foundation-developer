@@ -1,3 +1,8 @@
+## 0.22.0
+
+* define `PROJECT..._GLOBAL` more safely
+
+
 ## 0.21.0
 
 * Various small improvements
