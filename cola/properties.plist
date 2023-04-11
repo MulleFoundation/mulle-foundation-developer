@@ -1,0 +1,12 @@
+{
+   project =
+   {
+      description="👑 Objective-C development with the MulleFoundation and mulle-sde";
+      domain="github";
+      name="mulle-foundation-developer";
+      user="MulleFoundation";
+      repo="mulle-foundation-developer";
+      homepage="https://github.com/MulleFoundation/mulle-foundation-developer";
+      license="BSD-3-Clause"
+   };
+}

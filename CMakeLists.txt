@@ -2,7 +2,7 @@ cmake_minimum_required( VERSION 3.15)
 
 project( mulle-foundation-developer NONE)
 
-set( PROJECT_VERSION 0.22.0)
+set( PROJECT_VERSION 0.22.1)
 
 
 set( EXTENSIONS
