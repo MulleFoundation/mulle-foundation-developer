@@ -63,6 +63,8 @@ mulle-sde install --prefix /usr/local \
 ### Manual Installation
 
 
+Download the latest [tar](https://github.com/MulleFoundation/mulle-foundation-developer/archive/refs/tags/latest.tar.gz) or [zip](https://github.com/MulleFoundation/mulle-foundation-developer/archive/refs/tags/latest.zip) archive and unpack it.
+
 Install **mulle-foundation-developer** into `/usr/local` with [cmake](https://cmake.org):
 
 ``` sh
