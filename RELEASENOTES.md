@@ -1,3 +1,10 @@
+## 0.25.0
+
+
+
+* removed obsolete `__`<PROJECT_UPCASE_IDENTIFIER>`_ranlib__` variable from library and framework templates
+
+
 ### 0.24.1
 
 Various small improvements
