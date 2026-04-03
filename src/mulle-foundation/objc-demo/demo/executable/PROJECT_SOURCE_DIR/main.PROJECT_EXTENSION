@@ -16,7 +16,7 @@
 @implementation Hello
 
 + (void) printName:(NSString *) name
-           version:(unsigned int) version;
+           version:(unsigned int) version
 {
    NSLog( @"%@ %u", name, version);
 }
