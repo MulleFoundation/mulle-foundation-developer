@@ -47,3 +47,4 @@ build-ef7b/
 environment-user-*.sh
 .roam
 .graveyard
+*.tmp.*
